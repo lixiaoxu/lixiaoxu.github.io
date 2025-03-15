@@ -1,3 +1,18 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MathJax行内公式示例</title>
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$']],  // 行内公式标识
+            displayMath: [['$$', '$$']] // 块级公式标识（可选）
+        }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
 <!-- /wp:paragraph -->
 
 <a name="C"></a>
@@ -6,7 +21,6 @@
  	<li><a href="#C2">第二章</a> 虚无之魅</li>
  	<li><a href="#C3">第三章</a>...</li>
 </ul>
-
 <hr>
 
 <h2>Chap <a href="#C" name="C1">1</a>. 随机之魅</h2>
@@ -129,3 +143,5 @@ tt$estimate %*% c(1,-1) / tt$statistic ## SE = estimate/t, replacing "n" with "n
 </ul>
 <h2>Chap <a href="#C" name="C3">3</a>. 显著之魅</h2>
 ...
+</body>
+</html>
