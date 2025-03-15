@@ -1,0 +1,131 @@
+<!-- /wp:paragraph -->
+
+<a name="C"></a>
+<ul>
+ 	<li><a href="#C1">第一章</a> 随机之魅</li>
+ 	<li><a href="#C2">第二章</a> 虚无之魅</li>
+ 	<li><a href="#C3">第三章</a>...</li>
+</ul>
+
+<hr>
+
+<h2>Chap <a href="#C" name="C1">1</a>. 随机之魅</h2>
+<ul>
+ 	<li><a href="01.e_pi.html" target="_blank" rel="noopener noreferrer">R代码</a>：圆周率和自然对数底数一百万位小数频数<!-- wp:image {"id":168,"linkDestination":"custom"} -->
+<figure class="wp-block-image"><img class="wp-image-168 aligncenter" src="image-1024x705.png" alt=""></figure>
+</li>
+ 	<li><a href="01.binom.inv.html" target="_blank" rel="noreferrer noopener" aria-label="R代码 (opens in a new tab)">R代码</a>：累积分布与概率密度示意图</li>
+ 	<li><a href="01.Bertrand.html" target="_blank" rel="noreferrer noopener" aria-label="R代码 (opens in a new tab)">R代码</a>：Bertrand悖论示意图</li>
+ 	<li><a href="01.SGPvsHKG_weighted.xlsx" target="_blank" rel="noreferrer noopener" aria-label="Excel文档 (opens in a new tab)">Excel文档</a>：ESCS变量的Q-Q图与P-P图
+<figure class="wp-block-image"><img class="wp-image-177 size-medium aligncenter" src="image-3-300x143.png" alt="" width="300" height="143"></figure>
+</li>
+ 	<li><a href="01.qqpp.html" target="_blank" rel="noreferrer noopener" aria-label="R代码 (opens in a new tab)">R代码</a>：四地ESCS对照，附精简变量、地区的数据(<a href="CY07_MSU_STU_QQQ (HKG_QCI_SGP_TAP).sav">*.sav</a>)</li>
+ 	<li>脚注
+<ol>
+ 	<li>然而，Carl Hoefer为斯坦福哲学百科全书撰写的条目<em>Causal Determinism</em>可能会让多数不够了解量子力学的读者感到意外：「…大多数通俗科普读物声称量子力学的微观世界本质上随机而神秘——这个说法可能部分是错的，或者，也许未必错却仍然误导了大众。反讽的是，量子力学其实是决定论在当代最有希望的科学理论之一！…薛定谔方程讲物理系统描述为波函数，其演化通常被认为完全确定。如果没有任何东西可以中断薛定谔方程的波函数演化，如果薛定谔方程的波函数完备地刻画物理世界——量子力学就是个完美的决定论学说。」(<a href="http://plato.stanford.edu/entries/determinism-causal/" target="_blank" rel="noreferrer noopener" aria-label="sep (opens in a new tab)">sep</a>)</li>
+ 	<li>拙著《三生》4.4节、6.2节是本章的姊妹篇。有兴趣的读者可从中了解Julian Rotter的「内部归因倾向量表」在宗教心理学关于宿命感和使命感的实证研究得到的反直觉结果。 李晓煦. (2017). 三生有幸——幸福心理学的三种时间尺度. 工人出版社: 北京. (<a href="https://book.douban.com/subject/27663156/">douban</a>)</li>
+ 	<li>学过《高等数学》或者《数学分析》的同学可尝试作出数列收敛的精确表述。「几乎所有」的无理数都有这个特性。具体到特定的无理数π与<em>e</em>，严格说只是猜想，但鲜有数学研究者置疑。(<a href="http://www2.lbl.gov/Science-Articles/Archive/pi-random.html" target="_blank" rel="noreferrer noopener" aria-label="lbl (opens in a new tab)">lbl</a>)</li>
+ 	<li>初学者经常将<em>Percentile Rank</em>「百分等级」与<em>Percentile</em>「百分位数」混淆。<em>Percentile Rank</em>经常缩写为<em>PR</em>，在数学公式中用小写<em>p</em>标记；<em>Percentile</em>与<em>Quantile</em>几乎是同义词，在数学公式中用小写<em>q</em>标记。</li>
+ 	<li>这种方式生成的伪随机实数列在 [0, 1] 区间「稠密」：与其中任一给定实数的距离下界为0。以自然数为下标的实数集合「可数」，不能填满「不可数」的 [0, 1] 实数区间。关于「可数」与「不可数」的区别，推荐阅读面向中学生的科普薄书：张远南. (1988). 无限中的有限, 上海: 上海科普出版社. (<a href="https://book.douban.com/subject/1398247/" target="_blank" rel="noreferrer noopener" aria-label="douban (opens in a new tab)">douban</a>)</li>
+ 	<li>CDF的反函数定义为 $q=CD{{F}^{-1}}\left( p \right)=\inf \left\{ \left. X \right|p\le CDF(X) \right\}$ 。《高等数学》课程教学范围，CDF函数可证右连续，其反函数左连续。软件的计算精度、二进制十进制转换舍入可能在不连续的函数上造成不连续的误差。比如，Excel计算式 =BINOM.INV(2, 0.5, 0.25) 与 =BINOM.INV(2, 0.5, 0.75) 得到结果应当是0与1，但某些版本的Excel算出的结果都是1。</li>
+ 	<li>文献常见的「概率密度」术语指向了两种不同的数学对象。对微积分比较熟悉的读者可尝试构造两种数学对象混合的案例，比如标准正态分布伪随机数列和常数0数列混在一起，彼此各占一半。按连续累积分布函数的导函数，0点右侧的密度用Excel计算为 =0.5*NORM.DIST(0,0,1,FALSE)，约等于0.20；按离散累积分布函数的差分，0点的概率为0.5，或许不适合再称为「概率密度」，有的文献将其措辞为「概率质量」(probability mass)。</li>
+ 	<li>比如右图，视点距离圆心1.5倍外圆半径，即3倍内圆半径。外圆、内圆相对水平线张角的正弦函数分别等于2/3和1/3，正弦函数的反函数可计算出两个角度，后者是前者的46.57%。</li>
+ 	<li><a href="https://www.cbs.com/shows/lets_make_a_deal/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">https://www.cbs.com/shows/lets_make_a_deal/</a></li>
+ 	<li>Chaitin, G. J. (1975). Randomness and mathematical proof. <em>Scientific American</em>, <em>232</em>(5), 47-53. (<a href="https://www.scientificamerican.com/article/randomness-and-mathematical-proof/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">sa</a>)</li>
+ 	<li>谷歌检索"central tendency"+"中心趋势"仅有1580项，而"central tendency"+"集中趋势"有12400项，可见Central tendency中文文献主流译法是「集中趋势」。然而「集中趋势」中文字面意思与Dispersion（分散程度）方向相反，但仍然是同一维度的概念，容易误导认真的初学者。Dispersion的主流译法「离散趋势」也可以考虑改为「分散」，以免与「连续-离散」这个维度的概念Discrete混淆。</li>
+ 	<li>界面快捷键为alt+A $\blacktriangleright$ E $\blacktriangleright$ Q，即：按下alt键后单击A键再松开alt键，展开SPSS的Analyze（分析）主菜单。在主菜单展开的界面单击E键（不要按下alt键），展开Descriptive Statistics（描述统计）次级菜单；在次级菜单展开的界面单击Q键，进入Q-Q Plots…（Q-Q 图…）弹出的子窗口界面。</li>
+ 	<li>SPSS文档 (<a href="https://www.ibm.com/docs/en/spss-statistics/29.0.0?topic=pplot-fraction-subcommand-command" target="_blank" rel="noreferrer noopener" aria-label="ibm (opens in a new tab)">ibm</a>)</li>
+ 	<li>Q-Q Plots…子窗口界面，Test Distribution下拉框可选比对的分布。其中Normal选项缺省采用样本均值、样本标准差，不选Estimate from data，可输入总体均值、总体标准差。下拉框没有$F$分布选项，图示$F$分布随机数可将其转换为界面可选的Beta分布随机数： ${{\beta }_{d{{f}_{1}}/2,d{{f}_{2}}/2}}= 1-1/[1+(d{{f}_{1}}/d{{f}_{2}})\times F]$</li>
+ 	<li>双击SPSS的图示结果，可以弹出Chart Editor子窗口，alt+O $\blacktriangleright$ R转置横纵轴。</li>
+ 	<li>文件名CY07_MSU_STU_QQQ.sav (<a href="https://webfs.oecd.org/pisa2018/SPSS_STU_QQQ.zip" target="_blank" rel="noreferrer noopener" aria-label="oecd (opens in a new tab)">oecd</a>)</li>
+ 	<li>Avvisati, F. (2020). The measure of socio-economic status in PISA: a review and some suggested improvements. <em>Large-scale Assessments in Education</em>, <em>8</em>, 1-37. (<a href="https://largescaleassessmentsineducation.springeropen.com/articles/10.1186/s40536-020-00086-x" target="_blank" rel="noreferrer noopener" aria-label="SpingerOpen (opens in a new tab)">SpingerOpen</a>)</li>
+ 	<li>OECD. Publishing. (2009). <em>PISA Data Analysis Manual: SPSS, 2<sup>nd</sup> Edition</em>. Organisation for Economic Co-operation and Development. 第二章的Box 2.1前后详细解释了权重变量W_FSTUWT。本例中，从权重计算的百分比排名公式=(击败的个案权重和+ 0.5*并列的个案权重和)/不含缺失的个案权重和。在SPSS界面，可以设置数据的权重：alt+D $\blacktriangleright$ W $\blacktriangleright$ alt + W，选权重变量。(<a href="https://www.oecd-ilibrary.org/education/pisa-data-analysis-manual-spss-second-edition_9789264056275-en" target="_blank" rel="noreferrer noopener" aria-label="oecd (opens in a new tab)">oecd</a>)</li>
+ 	<li>也称为Probability-Probability Plots。SPSS界面：alt+A $\blacktriangleright$ E $\blacktriangleright$ P。</li>
+</ol>
+</li>
+</ul>
+<h2>Chap <a href="#C" name="C2">2</a>. 虚无之魅</h2>
+<ul>
+ 	<li>球桶隐喻：左手统计、右手概率 (<a href="#MIT_CC" name="MIT_CC_from">©CC</a> BY-NC-SA)
+<figure class="wp-block-image"><img class="wp-image-244 aligncenter" src="image-3.png" alt=""></figure>
+</li>
+ 	<li><a href="02.Binom.xlsx" target="_blank" rel="noopener noreferrer">Excel演示</a>：有放回地抽22球，无数次独立重复<!-- wp:image {"id":204} -->
+<figure class="wp-block-image"><img class="wp-image-244 aligncenter" src="image-6.png" alt=""></figure>
+</li>
+ 	<li><a href="02.Binom.html" target="_blank" rel="noopener noreferrer">R代码</a>：大桶黑球比例如何影响各种情形所占百分比
+<figure class="wp-block-image"><img class="wp-image-239 aligncenter" src="image-7-1024x499.png" alt=""></figure>
+</li>
+ 	<li><a href="02.StProp.html" target="_blank" rel="noopener noreferrer">R代码</a>：百分比统计量的两种标准化对比，图中<em>N</em>=22，$\mu$=0.413
+<figure class="wp-block-image"><img class="wp-image-254 aligncenter" src="image.png" alt=""></figure>
+</li>
+ 	<li><em>R</em>中的<a href="#Power" name="Power_from">Power</a>演示界面，逆时针旋转90°对应Neyman-Pearson四格图
+<figure class="wp-block-image"><img class="wp-image-257 aligncenter" src="image-1.png" alt=""></figure>
+<figure class="wp-block-image"><img class="wp-image-259" src="image-2.png" alt=""></figure>
+</li>
+ 	<li>脚注
+<ol>
+ 	<li>Bennett, H. (2004, Fall). <em>14.30 Introduction to Statistical Method in Economics</em>. Massachusetts Institute of Technology: MIT OpenCourseWare, Creative Commons BY-NC-SA. 图<a href="#MIT_CC_from" name="MIT_CC">2.1</a>左（原图为上下叠放的下图）在这里作了左右镜像，方便上下文指称其为「左手」。课件原图标注：Image by MIT OCW. Based on Gilbert, Norma. <em>Statistics</em>. W. B. Saunders Co., 1976. (<a href="https://dspace.mit.edu/handle/1721.1/35270" target="_blank" rel="noopener noreferrer">mit</a>, <a href="https://web.archive.org/web/20060413195040/http://ocw.mit.edu/OcwWeb/Economics/14-30Fall-2004/CourseHome/index.htm" target="_blank" rel="noopener noreferrer">wayback</a>)</li>
+ 	<li>数据背景：从1900到1984共22次美国大选，情绪更悲观的竞选人胜出的情形仅有4次，即图2.1左例4黑18白情形。Zullow, H. M., &amp; Seligman, M. E. (1990). Pessimistic rumination predicts defeat of presidential candidates, 1900 to 1984.&nbsp;<em>Psychological Inquiry</em>,&nbsp;<em>1</em>(1), 52-61. (<a href="https://psycnet.apa.org/record/1991-33035-001" target="_blank" rel="noopener noreferrer">apa</a>)</li>
+ 	<li>拙著《三生》2.1节与1.3节是本章的姊妹篇。本章2.1.2节交互演示的设计目标，对应《三生》2.1节「传播律」：让即使不懂编程的读者也能获得数十万个案数据过手的交互体验。因为「体验不是知识，传播体验的方式是让其发生。发生体验的途径可以是知识、可以作为知识通过语言传播，但是途径的知识传播不能替代践行途径的行动。」对心理学研究方法的操作主义旨趣感兴趣的读者，《三生》1.3节有更多的讨论。(<a href="https://book.douban.com/subject/27663156/">douban</a>)</li>
+ 	<li>R中的伪随机数种子设置函数是set.seed(种子数值)。J. Coleman 示范了Excel中如何利用Lehmer算法简洁地实现支持种子设置的伪随机数序列。(<a href="https://stackoverflow.com/a/33170115" target="_blank" rel="noopener noreferrer">stack</a>)</li>
+ 	<li>如对表单控件的操控界面设计感兴趣，可检索关键词：<span style="text-decoration: underline;">Excel 开发工具</span>。本例中，滚动条控制Y10009从1变到999；同时在Y10008填写 = Y10009/1000。使用ctrl+d/ctrl+r快速大量粘贴功能，宜用F4快捷键按需切换Excel公式中行/列坐标的相对/绝对引用方式，坐标前加$\$$表示绝对引用。如果演示需要涉及大量的列，「R1C1」坐标格式比缺省A1格式的格式坐标更方便，可在alt+F $\blacktriangleright$ T $\blacktriangleright$ 点「公式」 $\blacktriangleright$ alt+R切换。</li>
+ 	<li>很多教材将英文成语<em>rule of thumb</em>直译为「拇指法则」或「拇指定律」，初学者易误解为存在一条名为<em>Thumb</em>的定律。另外，注意到前文黑球总和标准误（一般情形的二项分布标准差）$\sqrt{N\mu \left( 1-\mu&nbsp; \right)}$ 、黑球百分比的标准误$\sqrt{\mu \left( 1-\mu&nbsp; \right)/N}$的推导与这条样本量经验法则无关，这组标准误公式并不需要大的样本量作为前提。</li>
+ 	<li>「厚尾」即<em>Q-Q</em>图示尾部是否比正态分布更远离中心。也存在左右尾一薄一厚的情形，比如$\chi^2$分布。</li>
+ 	<li>「理想的」、「理念的」都是对同一个词<em>ideal</em>的翻译。译为「理想」，因为柏拉图主张理念形式相对于具体事物是完美的。文献中<em>Idealism</em>有时按上下文翻译为理想主义，更经常翻译为熟知的「唯心主义」。用希腊字母-拉丁字母区分总体参数-样本统计量是Fisher在1922年开创的传统。
+Gigerenzer, G., Swijtink, Z., Porter, T., Daston, L., &amp; Kruger, L. (1990, Chap 3.6). <em>The empire of chance</em>. Cambridge University Press.</li>
+ 	<li>建于1996，全称<em>the Task Force on Statistical Inference</em>。(<a href="https://www.apa.org/science/leadership/bsa/statistical" target="_blank" rel="noopener noreferrer">apa</a>)</li>
+ 	<li>Wilkinson, L. &amp; TFSI (1999). Statistical methods in psychology journals: Guidelines and explanations. <em>American Psychologist</em>, <em>54</em>(8), 594. (<a href="https://www.apa.org/science/leadership/bsa/statistical/tfsi-followup-report.pdf" target="_blank" rel="noopener noreferrer">pdf</a>)</li>
+ 	<li>Westat (2016). Sampling in Pisa: First Meeting of the PISA 2018 National Project Managers. Prague. (<a href="https://www.oecd.org/pisa/pisaproducts/SAMPLING-IN-PISA.pdf" target="_blank" rel="noopener noreferrer">pdf</a>)</li>
+ 	<li>Pocock, S. J. (1977). Group sequential methods in the design and analysis of clinical trials. <em>Biometrika</em>, <em>64</em>(2), 191-199. 荐读Lakens, D. 就此论题附有R代码的网志文章(<a href="http://daniellakens.blogspot.com/2014/06/data-peeking-without-p-hacking.html">blogspot</a>)</li>
+ 	<li>数据背景：18世纪特定26年中巴黎男、女婴出生数，统计为251527男、241945女。Laplace, P. S. (1781). Mémoire sur les probabilités. <em>Mémoirs de l'Académie royale des Sciences de Paris</em>, <em>9</em>, 227-332.</li>
+ 	<li><em>Student</em>更准确的中译可能是「晚生」。参见笔者的知乎回答：学生化残差中的学生化是什么意思？(<a href="https://www.zhihu.com/question/27452966/answer/128084521" target="_blank" rel="noopener noreferrer">zhihu</a>)</li>
+ 	<li>一个流行的英文统计笑话：<em>What do you call a <strong>tea</strong> party with more than 30 people? ——A Z party!!!</em> (<a href="https://about.illinoisstate.edu/gcramsey/other/" target="_blank" rel="noopener noreferrer">isu</a>)
+如果考察常用的（0.05一类错误率双尾）临界值 相对 的近似程度，自由度30的时候有4.20%的扩大。可通过Excel公式 =T.INV(0.025,<strong><em>df </em></strong>)/NORM.INV(0.025,0,1)-100% 评估<strong><em>df</em></strong>取值对应的临界值近似程度，以扩大的百分比衡量。<strong><em>df</em></strong>取62，近似程度达到2%以下；<strong><em>df</em></strong>取123，近似程度达到1%以下。</li>
+ 	<li>Belia, S., Fidler, F., Williams, J., &amp; Cumming, G. (2005). Researchers misunderstand confidence intervals and standard error bars. <em>Psychological methods</em>, <em>10</em>(4), 389.</li>
+ 	<li>如果需要在Excel中使用SPSS报告的结果表格，可以通过SPSS菜单alt+f $\blacktriangleright$ t 的导出界面，通过下拉框选择将结果导出为Excel格式文件。在导出界面的窗口，可以通过 alt+c $\blacktriangleright$ alt+f 改变是否包含脚注和上标。如果选择不包含，可以在转换后的Excel文件保留SPSS最理想的数据精度。否则，上标标记的结果只剩下显示界面的数据精度。未标上标的结果可以直接从SPSS复制粘贴到Excel，缺省保留最理想的数据精度。兼容Excel的其它软件比如WPS目前尚不支持SPSS结果复制保留精度。</li>
+ 	<li>本书西文人名在脚注、文献引用不作中译，正文以谷歌精确检索条目数10万为限，未达到者保留西文不作翻译，以免尚未流行的人名中译给目标读者造成不必要的障碍。Charles Darwin的祖父正是Francis Galton的外祖父。自然选择学说注重研究个体变异与群体分布，演化论是Galton开创现代统计学主要背景。</li>
+ 	<li>Fisher作为Leonard Darwin的门徒(mentee)，可见于师徒之间情同父子的书信存档。(<a href="https://digital.library.adelaide.edu.au/dspace/bitstream/2440/67636/336/1929-02-23.pdf" target="_blank" rel="noopener noreferrer">1929-02-23.pdf</a>, <a href="https://digital.library.adelaide.edu.au/dspace/bitstream/2440/67636/335/1929-02-25.pdf" target="_blank" rel="noopener noreferrer">1929-02-25.pdf</a>)</li>
+ 	<li>Galton民族优生学 (National Eugenics) 讲席在二战后更名为Galton人类遗传学 (Human Genetics) 讲席。伦敦大学学院 (University College London) 原名伦敦大学 (London University)，1836年与伦敦其它几所大学形式上合并共享一张办学牌照(Royal charter)，合并后的「伦敦大学」目前实际上是各所独立大学组成的大学联盟。各所大学降格为名义上的学院，原伦敦大学改了个特别的校名「大学学院」。19世纪末20世纪初，开创现代统计学的主要学者汇聚该校。Karl Pearson和Fisher相继执教于优生学系；因子分析模型的先驱Charles Spearman长期执教于心理系。</li>
+ 	<li>Biau, D. J., Jolles, B. M., &amp; Porcher, R. (2010). <em>P</em> value and the theory of hypothesis testing: an explanation for new researchers. <em>Clinical Orthopaedics and Related Research®</em>, <em>468</em>(3), 885-892.</li>
+ 	<li><a href="#Power_from" name="Power"><em>R</em></a>代码：
+<pre class="wp-block-code"><code>## install.packages("RcmdrPlugin.TeachingDemos",dependencies = T)
+require("RcmdrPlugin.TeachingDemos")
+power.examp(n = 100,stdev = 2.4,diff = 0.6)
+powerExample()  # interactive demo</code></pre>
+</li>
+ 	<li>这篇文献的问卷给出六种最常见的误读，其中涉及概率的误读共有四种：Haller, H., &amp; Krauss, S. (2002). Misinterpretations of significance: A problem students share with their teachers. <em>Methods of Psychological Research</em>, <em>7</em>(1), 1-20.</li>
+ 	<li>比如近期医学领域四种代表性期刊这种情况的概览，研究团队发布了整理后的数据 (<a href="https://osf.io/preprints/725sz/" target="_blank" rel="noopener noreferrer">osf</a>)。Gates, S., &amp; Ealing, E. (2019). Reporting and interpretation of results from clinical trials that did not claim a treatment difference: survey of four general medical journals. <em>BMJ open</em>, <em>9</em>(9), e024785.</li>
+ 	<li><em>Assumption </em>(前提) 也经常被译为「假定」，但后一种译法易混淆于<em>Hypothesis </em>(假设)。例如，在各组方差一致前提下研究各组均值是否一致，方差相等是前提而不是假设。常见的范式II情形，研究者通常希望以数据支持前提，在前提近似成立的条件下，进一步用数据拒绝虚无假设，支持备择假设。通常可以用描述性统计（点估计、图示）支持前提，不应当用范式II将前提作为虚无假设。前提也不必严格成立，只需近似成立。例如：近似正态但非正态的数据，仍然适用各种基于正态分布前提的检验——即使样本量大、拒绝了正态假设。</li>
+ 	<li>Shaver, J. P. (2003). Null or nil. <em>The Scientist</em>, <em>17</em>(6), 19-20.</li>
+ 	<li>双尾检验的情况比较复杂，不妨视为一对多重比较：并行作左尾检验和右尾检验，取两个<em>p</em>值中较小的一个，再乘以2作Bonferroni校正。正如双尾置信区间可将$\alpha$除以2作Bonferroni校正：95%双尾置信区间即97.5%左尾置信区间和97.5%右尾置信区间重叠交集。Bonferroni校正的原理详见后续多重比较章节。</li>
+ 	<li>教学中常常提及的「小概率极端事件」特指：「相比该事件同样极端及更极端事件的集合」作为「事件集合」，其概率足够小。此处教学疑难源于概率术语「事件」(Event)对应生活语言「事件集合」(Event Set)。</li>
+ 	<li>van Belle, G. (2011). <em>Statistical rules of thumb</em>. John Wiley &amp; Sons.</li>
+ 	<li>最极端的${{t}_{0.5/2,\ df=1}}$= T.Inv(1-0.5/2,1)情形，恰好为1。即使在自由度为1的情形，单倍标准误半径的双尾区间置信度也有1-(1/2)。</li>
+ 	<li>详见笔者教学专栏文章：统计效力的三个标准误经验法则 (<a href="https://zhuanlan.zhihu.com/p/65470669" target="_blank" rel="noopener noreferrer">zhihu</a>)</li>
+ 	<li>Student. (1908). The probable error of a mean. <em>Biometrika</em>, <em>6</em>(1), 1-25. 参考 (<a href="http://stats.stackexchange.com/a/438712" target="_blank" rel="noopener noreferrer">stack</a>)</li>
+ 	<li>Lenhard, J. (2006). Models and statistical inference: The controversy between Fisher and Neyman–Pearson. <em>The British journal for the philosophy of science</em>, <em>57</em>(1), 69-91.</li>
+ 	<li>Neyman, J. (1937). Outline of a theory of statistical estimation based on the classical theory of probability. <em>Philosophical Transactions of the Royal Society of London. Series A, Mathematical and Physical Sciences</em>, <em>236</em>(767), 333-380.</li>
+ 	<li>Trafimow, D., &amp; Marks, M. (2015). Editorial. <em>Basic and Applied Social Psychology</em>, <em>37</em>(1), 1-2.(<a href="https://doi.org/10.1080/01973533.2015.1012991" target="_blank" rel="noopener noreferrer">pdf</a>)</li>
+ 	<li>从原文上下文可知，指引中的<strong><em>effect sizes</em></strong>不仅限于相关系数、Cohen's <em>d</em>，还包括回归系数、未标准化的均值差异。相关系数、Cohen's <em>d </em>都没有物理量纲，以个案标准差为计量单位。比如「睡眠质量与成绩正相关0.1」，即「睡眠质量每提高1个（睡眠质量的）标准差，成绩的相关（但非因果的）预测值随之提高0.1个（成绩的）标准差」；又比如「实验组比控制组睡眠质量高，Cohen's <em>d </em>= 0.2」，即「实验组睡眠质量均值比控制组高0.2个（组内个案的、睡眠质量的）标准差」。与此相反，回归系数、均值差异都可以有物理量纲。比如「睡眠时间预测成绩的回归系数为0.02考分/分钟」，即「每增加1分钟睡眠，成绩（可以不是因果的）回归预测值随之提高0.02考分」；又比如均值差异，「实验组比控制组睡眠均值多15.2分钟」。</li>
+ 	<li>原文<strong><em>Interval estimates</em></strong>，既可以指传统频率学派的置信区间(<em>Confidence interval</em>)，也可以指贝叶斯学派的可信区间(<em>Credible interval</em>，也有文献译为信赖区间、可靠区间)。原文对两个学派的区间估计报告兼容并包。</li>
+ 	<li>点估计的分布由大量独立重复研究每轮得到一份点估计汇总定义。最常用的<em>t</em>检验情形，点估计仍然服从正态分布而非<em>t</em>分布。服从<em>t</em>分布的是点估计的标准化得分，用标准误估计值作为标准化的分母。</li>
+ 	<li>“<em>Strict interpretation aside, we can think of confidence intervals as a special case of a credible interval when the prior carries little or no information.</em>” (<a href="https://www.cebm.ox.ac.uk/news/views/should-e-be-using-credible-intervals-more-routinely" target="_blank" rel="noopener noreferrer">cebx</a>)</li>
+ 	<li>检索日期：2022年2月9日。</li>
+ 	<li>如图2.4所述，对0、1取值数据作<em>t</em>检验得到几乎一样的结果，二者差别主要因为±0.5的Yates连续性校正：在计算<em>p</em>值的时候，<em>Y</em>为整数，事件集$\left\{ Y\le 232 \right\}$即$\left\{ Y\le 232+0.5 \right\}$。各种模型对比的<em>R</em>代码如下：
+<pre class="wp-block-code"><code>## with Yates' correction
+(pt_cr &lt;- prop.test(x = c(232,35350), n = c(232+22200, 35350+3130000)))
+chisq.test(rbind(c(232,35350),c(22200,3130000)))
+## without Yates' correction
+(pt_uncr &lt;- prop.test(x = c(232,35350), n = c(232+22200, 35350+3130000),correct=F)) 
+(tt &lt;- t.test(x=c(rep(1,232),rep(0,22200)), y=c(rep(1,35350),rep(0,3130000)))) 
+pt_uncr$conf.int %*% c(-1,1)/2/qnorm(1-0.05/2) ## SE = CIr/2/z_0.025
+## minus corrections
+(pt_cr$conf.int %*% c(-1,1)/2-0.5/(232+22200)-0.5/(35350+3130000))/qnorm(1-0.05/2) 
+tt$estimate %*% c(1,-1) / tt$statistic ## SE = estimate/t, replacing "n" with "n-1"</code></pre>
+</li>
+ 	<li>更有代表性的例子是：“<em>When a researcher estimates the parameters of a regression function using information on all 50 states in the United States, or information on all visits to a website, what is the interpretation of the standard errors?</em>” 笔者最初参与类似问题的讨论是因为读到：<em>如果用总体作为数据，那么回归系数的显著性还有意义吗？ - 王也的回答 </em>(<a href="https://www.zhihu.com/question/51893884/answer/129786894" target="_blank" rel="noopener noreferrer">zhihu</a>) 。英文引文出自该回答荐读的工作论文：Abadie, A., Athey, S., Imbens, G. W., &amp; Wooldridge, J. M. (2014). Finite population causal standard errors (<a href="https://www.nber.org/papers/w20325" target="_blank" rel="noopener noreferrer">nber</a>, No. w20325).</li>
+</ol>
+</li>
+</ul>
+<h2>Chap <a href="#C" name="C3">3</a>. 显著之魅</h2>
+...
